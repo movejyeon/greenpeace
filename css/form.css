@@ -1,0 +1,280 @@
+/* .wrap_bg */
+.wrap_bg {
+  background: url(../img/form_bg.jpg) no-repeat center/cover;
+  padding: 50px 0;
+}
+
+/* header */
+header {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0px auto;
+  text-align: center;
+}
+header img {
+  width: 200px;
+}
+
+/* main */
+
+.main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.8);
+  color: #555;
+  padding: 50px 0;
+  transform: translateY(10%);
+  opacity: 0;
+  transition: 1s;
+}
+.main.on {
+  transform: translateY(0);
+  opacity: 1;
+}
+.main h3 {
+  width: 100%;
+  margin: 0px auto;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+}
+form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* 후원금 관련 : help */
+.help ul {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1%;
+}
+.support li {
+  width: calc(50%);
+}
+.support li.on label {
+  background: #113751;
+  color: #fff;
+}
+.amount li {
+  width: calc(33.333%);
+}
+.amount li.on label {
+  background: #113751;
+  color: #fff;
+}
+.support li label,
+.amount li label {
+  display: inline-block;
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+.help input[type="radio"] {
+  appearance: none;
+}
+.help div {
+  margin: 15px auto;
+}
+.help div input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 후원자 정보 관련 */
+.personal p {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 50px 0 15px;
+}
+.personal ul input {
+  width: 100%;
+  border: none;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.birth select {
+  width: 33%;
+  border: none;
+  padding: 15px;
+}
+.card_check {
+  margin-top: 10px;
+}
+
+/* 카드 정보 관련 */
+.card p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 50px 0 15px;
+}
+.card_info input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  margin-bottom: 15px;
+}
+.person_check {
+  display: flex;
+  gap: 1%;
+}
+
+/* 전송버튼 */
+button {
+  margin-top: 50px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #113751;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 인덱스 버튼 */
+.index_btn {
+  display: block;
+  width: 90%;
+  margin: 15px auto 0;
+  background: #113751;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 개인정보 관련 */
+.privacy {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.privacy div {
+  width: 90%;
+  background: #fff;
+  max-width: 500px;
+  height: 500px;
+  font-size: 20px;
+  padding: 20px;
+}
+.privacy div span {
+  float: right;
+  font-size: 50px;
+  cursor: pointer;
+}
+.privacy div h3 {
+  margin-top: 23%;
+  line-height: 40px;
+  text-align: center;
+}
+
+/* 푸터 */
+footer {
+  padding: 80px 0;
+}
+footer ul {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+}
+/* footer img {
+  width: 100%;
+} */
+.footer_menu {
+  margin-bottom: 30px;
+}
+footer p {
+  line-height: 23px;
+}
+footer br {
+  display: none;
+}
+
+/* footer */
+@media all and (max-width: 1200px) {
+  footer {
+    padding: 35px 0;
+  }
+  footer ul {
+    display: block;
+  }
+  footer img {
+    margin-bottom: 15px;
+    width: 200px;
+  }
+  .footer_menu {
+    margin-bottom: 15px;
+  }
+}
+@media all and (max-width: 1050px) {
+  /* 후원자 정보 */
+  .birth select {
+    display: block;
+    width: 100%;
+  }
+  .birth select:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  /* 카드정보 */
+  .person_check {
+    display: block;
+  }
+  .person_check li:first-child {
+    margin-bottom: 8px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .main h3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .personal p {
+    font-size: 16px;
+    margin: 20px 0 15px;
+  }
+  .card p {
+    font-size: 16px;
+    margin: 20px 0 15px;
+  }
+
+  /* privacy */
+  .privacy div {
+    font-size: 4vw;
+    padding: 2vw;
+    height: 95vw;
+  }
+  .privacy div span {
+    font-size: 10vw;
+  }
+  .privacy div h3 {
+    line-height: 7.3vw;
+    margin-top: 23vw;
+  }
+}

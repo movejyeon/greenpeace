@@ -1,0 +1,80 @@
+/* footer */
+footer {
+  background: #555;
+  color: #fff;
+  padding: 50px 50px 50px 10vw;
+}
+footer a {
+  color: #fff;
+  padding: 0 50px 0 0;
+}
+.footer_line2 {
+  border-top: 1px solid #fff;
+  display: inline-block;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+footer .info {
+  margin-top: 50px;
+}
+.support_btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-color: #4cbb5c;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  position: fixed;
+  right: 50px;
+  bottom: 4%;
+  transition: 0.3s;
+}
+.support_btn:hover {
+  transform: scale(1.1);
+}
+.support_btn img {
+  width: 75%;
+  margin-bottom: 8px;
+}
+
+/* 미디어 쿼리 */
+@media all and (max-width: 1500px) {
+  .support_btn {
+    width: 130px;
+    height: 130px;
+  }
+  .support_btn img {
+    width: 70%;
+    margin-bottom: 5px;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  footer {
+    padding: 6vw 6vw 6vw 6vw;
+  }
+  footer a {
+    padding-right: 2vw;
+  }
+  .footer_line1,
+  .footer_line2 {
+    font-size: 13px;
+  }
+  .footer_line2 {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  footer .info {
+    font-size: 13px;
+    margin-top: 15px;
+  }
+  .support_btn {
+    width: 90px;
+    height: 90px;
+    right: 5vw;
+  }
+  .support_btn p {
+    font-size: 12px;
+  }
+}

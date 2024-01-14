@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>후원하기/form</title>
+    <link href="img/278ceZZJ.ico" rel="shortcut icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <script src="js/jquery-3.7.0.min.js"></script>
+  </head>
+  <body>
+    <!-- 전체 영역(배경) 입니당 -->
+    <div class="wrap_bg">
+      <!-- 헤더 입니당 -->
+      <header>
+        <h1>
+          <a href="index.html"><img src="img/logo_white.svg" alt="로고" /></a>
+        </h1>
+      </header>
+
+      <!-- 컨테이너 입니당 -->
+      <div class="main">
+        <h3>
+          여러분의 후원으로 그린피스는 북극을 비롯한<br />
+          전 세계 환경을 보호하는 활동을 펼치고 있습니다.
+        </h3>
+        <form action="#">
+          <!-- 후원금 관련 -->
+          <div class="help">
+            <ul class="support">
+              <li>
+                <input
+                  type="radio"
+                  name="support"
+                  id="regular"
+                  value="정기후원"
+                  required
+                />
+                <label for="regular">정기후원</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="support"
+                  id="onetime"
+                  value="일시후원"
+                  required
+                />
+                <label for="onetime">일시후원</label>
+              </li>
+            </ul>
+            <ul class="amount">
+              <li>
+                <input type="radio" name="amount" id="low" value="15000" />
+                <label for="low">15,000</label>
+              </li>
+              <li>
+                <input type="radio" name="amount" id="medium" value="20000" />
+                <label for="medium">20,000</label>
+              </li>
+              <li>
+                <input type="radio" name="amount" id="high" value="30000" />
+                <label for="high">30,000</label>
+              </li>
+            </ul>
+            <div>
+              <label for="direct">
+                <input
+                  type="number"
+                  name="direct"
+                  id="direct"
+                  placeholder="직접입력"
+                />
+              </label>
+            </div>
+          </div>
+
+          <!-- 후원자 정보 관련 -->
+          <div class="personal">
+            <p>후원자 정보를 입력하세요</p>
+            <ul>
+              <li>
+                <label for="name">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="이름"
+                    required
+                  />
+                </label>
+              </li>
+              <li>
+                <label for="email">
+                  <input
+                    type="emali"
+                    name="email"
+                    id="email"
+                    placeholder="이메일"
+                    required
+                  />
+                </label>
+              </li>
+              <li>
+                <label for="name">
+                  <input
+                    type="tel"
+                    name="tel"
+                    id="tel"
+                    placeholder="핸드폰 번호"
+                    required
+                  />
+                </label>
+              </li>
+            </ul>
+            <div class="birth">
+              <select id="year">
+                <option disabled selected>출생연도</option>
+              </select>
+              <select id="month">
+                <option disabled selected>월</option>
+              </select>
+              <select id="day">
+                <option disabled selected>일</option>
+              </select>
+            </div>
+            <div class="card_check">
+              <input type="checkbox" name="check" id="check" />
+              <label for="check"
+                >후원자와 카드 소유가 다른 경우 체크해주세요
+              </label>
+            </div>
+          </div>
+
+          <!-- 카드 정보 관련 -->
+          <div class="card">
+            <p>신용카드 정보를 입력해주세요</p>
+            <ul class="card_info">
+              <li>
+                <label for="card_num">
+                  <input
+                    type="num"
+                    name="card_num"
+                    id="card_num"
+                    placeholder="신용 카드 번호"
+                    required
+                  />
+                </label>
+              </li>
+              <li>
+                <label for="deadline">
+                  <input
+                    type="text"
+                    name="deadline"
+                    id="deadline"
+                    placeholder="유효기간 MM/YY"
+                    required
+                  />
+                </label>
+              </li>
+            </ul>
+            <ul class="person_check">
+              <li>
+                <input type="checkbox" name="person1" id="person1" required />
+                <label for="person1"
+                  >(필수) 개인정보 수집 및 이용동의
+                  <a class="guide_link1" href="#1">[내용 보기]</a>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="person2" id="person2" required />
+                <label for="person2"
+                  >(필수) 개인정보 제3자 제공동의
+                  <a class="guide_link2" href="#1">[내용 보기]</a>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 전송 버튼 -->
+          <button type="submit">후원하기</button>
+        </form>
+
+        <!-- 인덱스로 돌아가는 버튼 -->
+        <a class="index_btn" href="index.html">메인 홈페이지로 돌아가기</a>
+      </div>
+    </div>
+
+    <!-- 개인정보 관련 동의안내 문구 -->
+    <div class="privacy guide1">
+      <div>
+        <span class="material-symbols-outlined"> close </span>
+        <h3>
+          그린피스는 개인정보보호법에 따라<br />이용자의 개인정보 보호 및 권익을
+          보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록
+          다음과 같은 개인정보수집 및 이용동의을 두고 있습니다.
+          <br />
+          <br />
+          <-- 이하 생략 -->
+        </h3>
+      </div>
+    </div>
+
+    <div class="privacy guide2">
+      <div>
+        <span class="material-symbols-outlined"> close </span>
+        <h3>
+          그린피스는 개인정보보호법에 따라<br />이용자의 개인정보 보호 및 권익을
+          보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록
+          다음과 같은 개인정보 제3자 제공동의를 두고 있습니다.
+          <br />
+          <br />
+          <-- 이하 생략 -->
+        </h3>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+      <ul>
+        <li>
+          <h1>
+            <a href="index.html">
+              <img src="img/logo_black.svg" alt="검정 로고" />
+            </a>
+          </h1>
+        </li>
+        <li>
+          <div class="footer_menu">
+            <a href="index.html">홈페이지</a>｜
+            <a href="#">개인정보 보호정책</a>｜ <a href="#">저작권</a>｜
+            <a href="#">연락처</a>｜ <a href="#">보도자료와 미디어</a>｜
+            <a href="#">그린피스 소개</a>
+          </div>
+          <div class="footer_info">
+            <p>COPYRIGHT © 2023 GREENPEACE. ALL RIGHTS RESERVED.</p>
+            <p>
+              | 재단법인 그린피스 | 대표자: SZE PANG CHEUNG (쯔이팽청)<br />
+              | 주소: 서울시 용산구 한강대로 257 청룡빌딩 6층 (우편번호:
+              04322)<br />
+              | 고유번호: 105-82-21567
+            </p>
+          </div>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- 스크립트 -->
+    <script src="js/form.js"></script>
+  </body>
+</html>
